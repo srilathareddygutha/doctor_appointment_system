@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Patients Table</title>
+
+</head>
+
+<body>
+
+<h1>Patients Table</h1>
+
+<table border="1" cellpadding="10">
+
+<tr>
+
+    <th>Patient ID</th>
+
+    <th>User ID</th>
+
+    <th>Date of Birth</th>
+
+    <th>Gender</th>
+
+    <th>Blood Group</th>
+
+    <th>Address</th>
+
+</tr>
+
+{% for i in data %}
+
+<tr>
+
+    <td>{{ i.patient_id }}</td>
+
+    <td>{{ i.user.user_id }}</td>
+
+    <td>{{ i.date_of_birth }}</td>
+
+    <td>{{ i.gender }}</td>
+
+    <td>{{ i.blood_group }}</td>
+
+    <td>{{ i.address }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+
+</html>

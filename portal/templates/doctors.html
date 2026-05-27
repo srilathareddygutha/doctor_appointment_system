@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Doctors Table</title>
+
+</head>
+
+<body>
+
+<h1>Doctors Table</h1>
+
+<table border="1" cellpadding="10">
+
+<tr>
+
+    <th>Doctor ID</th>
+
+    <th>User ID</th>
+
+    <th>Specialization</th>
+
+    <th>Qualification</th>
+
+    <th>Experience Years</th>
+
+    <th>Registration Number</th>
+
+    <th>Consultation Fee</th>
+
+    <th>Average Rating</th>
+
+    <th>Approved</th>
+
+    <th>Approved At</th>
+
+    <th>Update Rating</th>
+
+</tr>
+
+{% for i in data %}
+
+<tr>
+
+    <td>{{ i.doctor_id }}</td>
+
+    <td>{{ i.user.user_id }}</td>
+
+    <td>{{ i.specialization }}</td>
+
+    <td>{{ i.qualification }}</td>
+
+    <td>{{ i.experience_years }}</td>
+
+    <td>{{ i.registration_number }}</td>
+
+    <td>{{ i.consultation_fee }}</td>
+
+    <td>{{ i.avg_rating }}</td>
+
+    <td>{{ i.is_approved }}</td>
+
+    <td>{{ i.approved_at }}</td>
+
+    <td>
+
+<a href="/update-rating/{{ i.doctor_id }}/">
+
+Update Rating
+
+</a>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Appointments Table</title>
+
+</head>
+
+<body>
+
+<h1>Appointments Table</h1>
+
+<table border="1" cellpadding="10">
+
+<tr>
+
+    <th>Appointment ID</th>
+
+    <th>Patient Name</th>
+
+    <th>Doctor Name</th>
+
+    <th>Appointment Date</th>
+
+    <th>Status</th>
+
+    <th>Reason</th>
+
+    <th>Update</th>
+
+</tr>
+
+{% for i in data %}
+
+<tr>
+
+    <td>{{ i.appointment_id }}</td>
+
+    <td>{{ i.patient.user.full_name }}</td>
+
+    <td>{{ i.doctor.user.full_name }}</td>
+
+    <td>{{ i.appointment_date }}</td>
+
+    <td>{{ i.status }}</td>
+
+    <td>{{ i.reason_for_visit }}</td>
+
+    <td>
+
+<a href="/update-appointment/{{ i.appointment_id }}/Booked/">
+
+Booked
+
+</a>
+
+<br><br>
+
+<a href="/update-appointment/{{ i.appointment_id }}/Completed/">
+
+Completed
+
+</a>
+
+<br><br>
+
+<a href="/update-appointment/{{ i.appointment_id }}/Cancelled/">
+
+Cancelled
+
+</a>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+
+</html>

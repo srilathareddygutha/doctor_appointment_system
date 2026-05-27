@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Expensive Doctors</title>
+
+</head>
+
+<body>
+
+<h1>Doctors With Fee Greater Than 500</h1>
+
+<table border="1" cellpadding="10">
+
+<tr>
+
+    <th>Doctor ID</th>
+
+    <th>Specialization</th>
+
+    <th>Fee</th>
+
+</tr>
+
+{% for i in data %}
+
+<tr>
+
+    <td>{{ i.doctor_id }}</td>
+
+    <td>{{ i.specialization }}</td>
+
+    <td>{{ i.consultation_fee }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+
+</html>

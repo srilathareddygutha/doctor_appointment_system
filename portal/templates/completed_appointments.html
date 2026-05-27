@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Completed Appointments</title>
+
+</head>
+
+<body>
+
+<h1>Completed Appointments</h1>
+
+<table border="1" cellpadding="10">
+
+<tr>
+
+    <th>Appointment ID</th>
+
+    <th>Date</th>
+
+    <th>Status</th>
+
+</tr>
+
+{% for i in data %}
+
+<tr>
+
+    <td>{{ i.appointment_id }}</td>
+
+    <td>{{ i.appointment_date }}</td>
+
+    <td>{{ i.status }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+
+</html>

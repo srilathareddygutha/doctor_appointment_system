@@ -1,0 +1,33 @@
+<h1>Add Notification</h1>
+
+<form method="POST">
+
+{% csrf_token %}
+
+User ID:
+
+<input type="text" name="user_id">
+
+<br><br>
+
+Title:
+
+<input type="text" name="title">
+
+<br><br>
+
+Message:
+
+<input type="text" name="message">
+
+<br><br>
+
+Type:
+
+<input type="text" name="type">
+
+<br><br>
+
+<input type="submit" value="Add">
+
+</form>

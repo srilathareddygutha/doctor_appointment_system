@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Slots Table</title>
+
+</head>
+
+<body>
+
+<h1>Slots Table</h1>
+
+<table border="1" cellpadding="10">
+
+<tr>
+
+    <th>Slot ID</th>
+
+    <th>Schedule ID</th>
+
+    <th>Start Time</th>
+
+    <th>End Time</th>
+
+    <th>Available</th>
+
+</tr>
+
+{% for i in data %}
+
+<tr>
+
+    <td>{{ i.slot_id }}</td>
+
+    <td>{{ i.schedule.schedule_id }}</td>
+
+    <td>{{ i.slot_start_time }}</td>
+
+    <td>{{ i.slot_end_time }}</td>
+
+    <td>{{ i.is_available }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+
+</html>

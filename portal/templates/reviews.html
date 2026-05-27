@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Reviews Table</title>
+
+</head>
+
+<body>
+
+<h1>Reviews Table</h1>
+
+<table border="1" cellpadding="10">
+
+<tr>
+
+    <th>Review ID</th>
+
+    <th>Patient Name</th>
+
+    <th>Doctor Name</th>
+
+    <th>Rating</th>
+
+    <th>Review</th>
+
+</tr>
+
+{% for i in data %}
+
+<tr>
+
+    <td>{{ i.review_id }}</td>
+
+    <td>{{ i.patient.user.full_name }}</td>
+
+    <td>{{ i.doctor.user.full_name }}</td>
+
+    <td>{{ i.rating }}</td>
+
+    <td>{{ i.review_text }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+
+</html>

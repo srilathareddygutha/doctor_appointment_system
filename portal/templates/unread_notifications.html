@@ -1,0 +1,47 @@
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Unread Notifications</title>
+
+</head>
+
+<body>
+
+<h1>Unread Notifications</h1>
+
+<table border="1" cellpadding="10">
+
+<tr>
+
+    <th>Notification ID</th>
+
+    <th>Title</th>
+
+    <th>Message</th>
+
+</tr>
+
+{% for i in data %}
+
+<tr>
+
+    <td>{{ i.notification_id }}</td>
+
+    <td>{{ i.title }}</td>
+
+    <td>{{ i.message }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+
+</html>
